@@ -1,0 +1,80 @@
+[
+  {
+    "name": "v4-core",
+    "repository": "https://github.com/Uniswap/v4-core",
+    "commit": "59d3ecf53afa9264a16bba0e38f4c5d2231f80bc",
+    "version": "1.0.2",
+    "archive": "https://codeload.github.com/Uniswap/v4-core/tar.gz/59d3ecf53afa9264a16bba0e38f4c5d2231f80bc",
+    "sha256": "130e1ae60c10254ecebadd9d963294617081da7fb3f7f5c3b98e3f0db06769a6",
+    "included": [
+      "src",
+      "test",
+      "LICENSE*",
+      "package.json",
+      "README.md"
+    ],
+    "excluded": [
+      "test/bin"
+    ]
+  },
+  {
+    "name": "forge-std",
+    "repository": "https://github.com/foundry-rs/forge-std",
+    "commit": "1de6eecf821de7fe2c908cc48d3ab3dced20717f",
+    "version": "1.9.3 (v4-core pin)",
+    "archive": "https://codeload.github.com/foundry-rs/forge-std/tar.gz/1de6eecf821de7fe2c908cc48d3ab3dced20717f",
+    "sha256": "09b5e6514bda6dee2271569fab7e3a91dfc3ba7a0f22d4a0abfdd154aad35eda",
+    "included": [
+      "src",
+      "LICENSE*",
+      "package.json",
+      "README.md"
+    ],
+    "excluded": []
+  },
+  {
+    "name": "solmate",
+    "repository": "https://github.com/transmissions11/solmate",
+    "commit": "4b47a19038b798b4a33d9749d25e570443520647",
+    "version": "upstream pin",
+    "archive": "https://codeload.github.com/transmissions11/solmate/tar.gz/4b47a19038b798b4a33d9749d25e570443520647",
+    "sha256": "9aa78449f8bc10931520500ec24734f089af9ac875a3334d8b512f8727241667",
+    "included": [
+      "src",
+      "LICENSE*",
+      "package.json",
+      "README.md"
+    ],
+    "excluded": []
+  },
+  {
+    "name": "openzeppelin-contracts",
+    "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+    "commit": "dbb6104ce834628e473d2173bbc9d47f81a9eec3",
+    "version": "5.0.2",
+    "archive": "https://codeload.github.com/OpenZeppelin/openzeppelin-contracts/tar.gz/dbb6104ce834628e473d2173bbc9d47f81a9eec3",
+    "sha256": "4a9c091852052f4319173629e0bf0b5cdf7a39d70e5e2298a7a6a149eff9f385",
+    "included": [
+      "contracts",
+      "LICENSE*",
+      "package.json",
+      "README.md"
+    ],
+    "excluded": []
+  },
+  {
+    "name": "ds-test",
+    "repository": "https://github.com/dapphub/ds-test",
+    "commit": "cd98eff28324bfac652e63a239a60632a761790b",
+    "version": "Solmate upstream pin",
+    "archive": "https://codeload.github.com/dapphub/ds-test/tar.gz/cd98eff28324bfac652e63a239a60632a761790b",
+    "sha256": "ba6fb1f38d6effafa318ed2a574a4d36027a7d481cec252853694df6477b5c3a",
+    "included": [
+      "src",
+      "LICENSE*",
+      "COPYING",
+      "README.md"
+    ],
+    "excluded": []
+  }
+]
