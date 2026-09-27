@@ -2,6 +2,8 @@
 
 A local development kit for **Uniswap v4-core 1.0.2**, Solidity **0.8.26**, and the **Cancun EVM**. It includes a CREATE2 permission miner, a native ETH/ERC20 pool fixture, and a hook that charges a fixed 1% fee. No deployment or broadcast is part of this project.
 
+**Development example only:** the token and routers are test utilities, the swap helpers use extreme price limits, and no audit or deployment artifact is supplied. The hook has no pool allowlist or protection against a pool creator choosing an unexpected pool key. Do not use this fixture or example as a production trading or custody system for real funds.
+
 ## Build and test offline
 
 Install Foundry and provision solc 0.8.26 on the machine before disconnecting from the network. All Solidity dependencies are already ordinary files in `lib/`; no package installation, submodule checkout, RPC endpoint, wallet, or environment variables are needed.
@@ -19,6 +21,14 @@ The [dependency manifest](lib/dependencies.json) records exact commits and archi
 An optional maintainer command, `python3 tools/vendor_dependencies.py`, refreshes the same source snapshots from checksum-verified archives. It needs network access; **normal builds do not invoke it**. Review and include refreshed files with the project. Dependency licenses remain alongside the source. In particular, v4-core contains BUSL-1.1 code and Solmate contains AGPL code; this kit's MIT license does not replace their licenses.
 
 ## Reuse the fixture
+
+Run one complete local example from a fresh clone (after installing Foundry and solc 0.8.26):
+
+```sh
+forge test --match-contract FlatFeeHookTest --match-test testExactInputZeroForOne -vv
+```
+
+The step-by-step [hook harness guide](docs/hook-harness.md) covers deployment, swap modes, collection, and the entry-point reference.
 
 Derive tests from [HookTestBase](test/utils/HookTestBase.sol), call `super.setUp()`, deploy the hook through `deployHook`, then call `initPool`:
 
